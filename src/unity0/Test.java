@@ -15,7 +15,24 @@ public class Test {
         TestingQueves();
         TestingList();
     }
-   
+    public static void TestingList(){
+           List lis=new List();
+      
+       for(int i=0;i<5;i++){
+           lis.add(i+2, i);
+       }
+        System.out.println("......list.....");
+       System.out.println(".....Initial valves.......");
+       lis.print();
+       lis.add(10, 1);
+       
+        System.out.println(".....element removed.....");
+       lis.print();
+       lis.Remove(2);
+        System.out.println("....corruent valves.......");
+       lis.print();
+    
+}
     public static void TestingStacks(){
         Stack s = new Stack();
         System.out.println("....pilas....");
