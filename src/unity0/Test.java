@@ -13,8 +13,9 @@ public class Test {
     public static void main (String [] args){
         TestingStacks();
         TestingQueves();
-        
+        TestingList();
     }
+   
     public static void TestingStacks(){
         Stack s = new Stack();
         System.out.println("....pilas....");
