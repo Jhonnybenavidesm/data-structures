@@ -10,6 +10,7 @@ package unity1.simplestructures;
  * @author AULA1
  */
 public class Nodo {
+    static Nodo aux;
     protected int Data;
     protected Nodo next;
     

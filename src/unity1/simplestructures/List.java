@@ -11,6 +11,7 @@ package unity1.simplestructures;
  */
 public class List {
     private Nodo head;
+    private Object aux;
     
     public List (){
         head=null;
@@ -49,13 +50,23 @@ public class List {
 
 }
     public void printfirselement(){
-        int p=5;
-        Nodo aux=head;
-        while(aux !=null){
-            if(p=aux.Data){
-                return p;
-            }
+     if (head==null){
+         System.out.print("-1");
+     } 
+     else{
+         System.out.print(head.Data);
+     }
+    }
+    public void laselement(){
+        if(aux != null){
+            Nodo.aux=head;
+            while(aux.next ! null){
+            aux=aux.next;
         }
-                
+            System.out.print(aux.Data);
+            
+        }else{
+            System.out.print("-1");
+        }
     }
 }
