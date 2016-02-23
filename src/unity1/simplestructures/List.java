@@ -57,16 +57,30 @@ public class List {
          System.out.print(head.Data);
      }
     }
-    public void laselement(){
-        if(aux != null){
-            Nodo.aux=head;
-            while(aux.next ! null){
-            aux=aux.next;
-        }
-            System.out.print(aux.Data);
-            
-        }else{
-            System.out.print("-1");
-        }
-    }
-}
+    public void printlastelement(){ 
+         Nodo aux=head; 
+         if(aux.next!=null){ 
+              while(aux.next!=null){ 
+                aux=aux.next; 
+              } 
+              System.out.println(aux.Data); 
+         } else { 
+             System.out.println("-1"); 
+         }
+           
+    } 
+
+    public void removefirtselement(){ 
+         head=head.next; 
+   } 
+    public void removeLastelement(){ 
+        Nodo aux=head, p=null; 
+         while(aux.next!=null){ 
+             p=aux; 
+             aux=aux.next; 
+         } 
+         p.next=null; 
+     } 
+  } 
+
+

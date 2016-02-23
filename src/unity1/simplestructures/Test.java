@@ -21,6 +21,8 @@ public class Test {
         System.out.println("Total nodes:"+c);
         System.out.print("the first element is:");
         l.printfirselement();
-        l.laselement();
+        System.out.println("the first element is");
+        l.printlastelement();
+        System.out.println("the last element is");
     }
 }
