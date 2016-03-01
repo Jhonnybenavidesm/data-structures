@@ -12,17 +12,29 @@ package unity1.simplestructures;
 public class Test {
     public static void main(String args[]){
         List l=new List();
-        l.add(5);
-        l.add(10);
-        l.add(15);
+        l.add(3);
+        l.add(6);
+        l.add(9);
+        l.add(12);
         System.out.print("initial values");
         l.print();
         int c = l.counter();
         System.out.println("Total nodes:"+c);
-        System.out.print("the first element is:");
-        l.printfirselement();
         System.out.println("the first element is");
-        l.printlastelement();
+        l.printfirselement();
+        System.out.println("");
         System.out.println("the last element is");
+        l.printlastelement();
+        
+        System.out.println("duplicating...");
+        l.duplicate();
+        System.out.println("values aster duplication");
+        l.print();
+        
+        System.out.println("duplicating mirror");
+        l.duplicatemirror();
+        System.out.println("values aster duplication mirror");
+        l.print();
+        
     }
 }

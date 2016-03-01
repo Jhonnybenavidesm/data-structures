@@ -81,6 +81,27 @@ public class List {
          } 
          p.next=null; 
      } 
+    public void duplicate(){
+        if(head==null)return;
+        Nodo last=head, aux=head;
+        while(last.next !=null){
+            last=last.next;
+        }
+        int c=counter();
+        for(int i=0; i<c; i++){
+            last.next=new Nodo(aux.Data);
+            aux=aux.next;
+            last=last.next;
+        }
+    }
+    public void duplicatemirror(){
+        if(head==null)return;
+        Nodo last=head, aux=head;
+        while(last.next !=null){
+            last=last.next;
+        }
+       
+    }
   } 
 
 
