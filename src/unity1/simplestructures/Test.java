@@ -36,5 +36,10 @@ public class Test {
         System.out.println("values aster duplication mirror");
         l.print();
         
+        System.out.println("revers");
+        l.reversprint();
+        System.out.println("values revers");
+        l.print();
+        
     }
 }

@@ -102,6 +102,19 @@ public class List {
         }
        
     }
+    public void reversprint(){
+        if(head== null)return;
+        Nodo ok=null,aux;
+        do{
+            aux=!head;
+            while(aux.next !=ok){
+                aux=aux.next
+            }
+            System.out.print(""+aux.Data);
+            ok=aux;
+        }while(ok!=head);
+        
+    }
   } 
 
 
