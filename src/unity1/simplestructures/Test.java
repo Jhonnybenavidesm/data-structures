@@ -13,7 +13,7 @@ public class Test {
     public static void main(String args[]){
         List l=new List();
         l.add(3);
-        l.add(6);
+        l.add(5);
         l.add(9);
         l.add(12);
         System.out.print("initial values");
@@ -36,10 +36,6 @@ public class Test {
         System.out.println("values aster duplication mirror");
         l.print();
         
-        System.out.println("revers");
-        l.reversprint();
-        System.out.println("values revers");
-        l.print();
         
     }
 }

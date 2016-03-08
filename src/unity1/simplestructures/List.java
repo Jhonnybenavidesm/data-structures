@@ -102,19 +102,45 @@ public class List {
         }
        
     }
-    public void reversprint(){
-        if(head== null)return;
-        Nodo ok=null,aux;
-        do{
-            aux=!head;
-            while(aux.next !=ok){
-                aux=aux.next
-            }
-            System.out.print(""+aux.Data);
-            ok=aux;
-        }while(ok!=head);
+    
+    public void insertzeros(){ 
+     
+        Nodo aux=head;
+        int  c=counter();
+        for(int i=1;i<c;i++){
+            Nodo n=new Nodo(0);
+            n.next=aux.next;
+            aux.next=n;
+            aux=n.next;
+        }
+    
+    } 
+    
+    public void removemiddle(){
+        Nodo aux=head;
+       Nodo p=head;
+       int c=counter();
+       for (int i=0;i<c/2;i++){
+           p=aux;
+           aux=aux.next;
+           
+       }
+       p.next=aux.next;
         
     }
+    
+    public int countodds(){
+        Nodo aux= head; 
+        int p=0;
+        while(aux.next!=null){
+            if(aux.Data%2==1){
+                p++;
+            }
+            aux=aux.next;
+        }
+        return p;
+    }
+    
   } 
 
 
