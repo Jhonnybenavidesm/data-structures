@@ -141,6 +141,74 @@ public class List {
         return p;
     }
     
+    public void reserversprint(){
+        if (head==null)return;
+        Nodo ok=null,aux;
+        do{
+            aux=head;
+            while(aux.next !=ok){
+                aux=aux.next;
+            }
+            System.out.print(""+aux.Data);
+            ok=aux;
+       
+        } while(ok!=head);
+    }
+    
+    public void invert(){
+        if (head==null)return;
+        Nodo aux=head,head2=null;
+        while(head!=null){
+            aux=head;
+            head=head2.next;
+            head2=aux;
+        }
+        head=head2;
+    }
+    public void removeIntercalated(){
+        Nodo aux=head;
+        Nodo p=head;
+        int c = counter();
+        for(int i=0; i<c; i++){
+            if(i mod!=0){
+            p=aux;
+            aux=aux.next;
+        }else{
+               aux=aux.next; 
+                }
+        }
+    }
+    
+    public void duplicateinercalate(){
+        Nodo p=head;
+        Nodo aux=head;
+        while(aux.next!=null){
+            Nodo n=new Nodo(p.Data);
+            p.next=n;
+            aux=aux.next;
+            n.next=aux;
+            p=aux;
+        }
+    }
+    
+    public void remuverecurrents(){
+        Nodo aux=head;
+        Nodo p=head;
+        Nodo back=head;
+        while(aux.next!=null){
+            p=head;
+            while(p!=null){
+                if(p.Data==aux.Data){
+                    back.next=aux.next;
+                    back.next=aux.next;
+                }
+                p=p.next;
+            }
+            back=aux;
+        }
+        back=aux;
+        aux=aux.next;
+    }
   } 
 
 
