@@ -170,7 +170,7 @@ public class List {
         Nodo p=head;
         int c = counter();
         for(int i=0; i<c; i++){
-            if(i mod!=0){
+            if(i%2==1){
             p=aux;
             aux=aux.next;
         }else{

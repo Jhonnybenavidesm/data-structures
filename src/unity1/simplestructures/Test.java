@@ -36,7 +36,7 @@ public class Test {
         System.out.println("values aster duplication mirror");
         l.print();
         
-        
+    
         
     }
 }
