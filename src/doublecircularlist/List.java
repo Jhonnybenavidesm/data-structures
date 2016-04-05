@@ -40,5 +40,5 @@ public class List {
          } while(aux!=head);
           System.out.println();
      }
-}
+
 }
