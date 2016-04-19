@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package unity2.doublelist;
+package firstunity.unity2.doublelist;
 
 /**
  *

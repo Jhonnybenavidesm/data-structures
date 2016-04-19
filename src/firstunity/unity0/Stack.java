@@ -3,14 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package unity0;
+package firstunity.unity0;
 
 /**
  *
- * @author AULA1
- */
-public class Queve {
-   private int[] data;
+ * @author AULA4
+ */ 
+
+public class Stack {
+    private int[] data;
     private int top;
     public void add(int d){
         data[top]=d;
@@ -18,13 +19,8 @@ public class Queve {
         
     }
     public int remove(){
-       int d= data[0];
-       for(int i=0;i<top-1;i++){
-           data[i]=data[i++];
-           
-       }
-       top--;
-       return d;
+        top--;
+        return data[top];
     }
     public void print(){
         for(int i=0; i<top; i++){
@@ -32,7 +28,7 @@ public class Queve {
         }
         System.out.println();
     }
-    public Queve (){
+    public Stack(){
         data = new int [100];
         top=0;
     }
@@ -40,4 +36,6 @@ public class Queve {
     void println() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    
+    
 }

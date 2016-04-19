@@ -3,22 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package unity1.simplestructures.imagebrowser;
+package firstunity.unity1.simplestructures;
 
 /**
  *
  * @author AULA1
  */
-public class ImageFile {
-   protected String name;
-   protected ImageFile next, back;
-   
-   public ImageFile (String name){
-       this.name=name;
-       next=null;
-       back=null;
-   }
+public class Nodo {
+    static Nodo aux;
+    protected int Data;
+    protected Nodo next;
     
+    public Nodo (int d){
+        Data = d;
+        next=null;
+        
+    }
     
     
 }

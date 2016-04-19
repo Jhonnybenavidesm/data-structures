@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package unity1.simplestructures.imagebrowser;
+package firstunity.unity1.simplestructures.imagebrowser;
 
 import javax.swing.ImageIcon;
 

@@ -3,22 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package unity1.simplestructures;
+package unity2;
 
 /**
  *
  * @author AULA1
  */
-public class Nodo {
-    static Nodo aux;
+public class Node {
     protected int Data;
-    protected Nodo next;
+    protected Node left;
+    protected Node right;
     
-    public Nodo (int d){
-        Data = d;
-        next=null;
-        
+    public Node (int d){
+        Data=d;
+        left=null;
+        right=null;
     }
-    
     
 }
