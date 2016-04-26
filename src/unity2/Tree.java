@@ -5,6 +5,7 @@
  */
 package unity2;
 
+import java.util.Stack;
 import java.util.Vector;
 
 /**
@@ -84,4 +85,88 @@ public boolean isLeaf(int d){
     }
   return false;  
 }
+public void print(){
+       Node aux=root;
+       Stack <Node> s = new Stack <Node>();
+       while(aux!=null){
+           s.push(aux);
+           aux=aux.left;
+       }
+       while(!s.empty()){
+           aux=s.pop();
+           System.out.println(""+aux.Data);
+           aux=aux.right;
+           
+           while(aux!=null){
+               s.push(aux);
+               aux=aux.left;
+           }
+       }
+   }
+   
+   public int Count(){
+       
+       int cont=0;
+       Node aux=root;
+       Stack <Node> s = new Stack <Node>();
+       while(aux!=null){
+           s.push(aux);
+           aux=aux.left;
+       }
+        while(!s.empty()){
+           aux=s.pop();
+           cont++;
+           aux=aux.right;
+           
+           while(aux!=null){
+               s.push(aux);
+               aux=aux.left;
+           }
+       }
+        return cont;
+   }
+   
+   public void Printleafs(){
+       
+       Node aux = root;
+       Stack <Node> s = new Stack <Node>();
+       while(aux!=null){
+           s.push(aux);
+           aux=aux.left;
+       }
+        while(!s.empty()){
+           aux=s.pop();
+           aux=aux.right;
+           
+           if(aux.left==null&&aux.right==null){
+               System.out.println(""+aux.Data);
+           }
+           
+           while(aux!=null){
+               s.push(aux);
+               aux=aux.left;
+           }
+       }
+   }
+   
+   public int Max(){
+       if(root==null)return -1;
+       
+       Node aux=root;
+       while(aux.right!=null){
+           aux=aux.right;
+       }
+       return aux.Data;
+   }
+   
+    public int Min(){
+       if(root==null)return -1;
+       
+       Node aux=root;
+       while(aux.left!=null){
+           aux=aux.left;
+       }
+       return aux.Data;
+   }
+
 }
