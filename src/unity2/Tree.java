@@ -168,5 +168,27 @@ public void print(){
        }
        return aux.Data;
    }
+    
+        public void recursivePrint(){
+            recursivePrint(root);
+            System.out.println();
+        }
+        
+        private void recursivePrint(Node r){
+            if(r==null)return;
+            recursivePrint(r.left);
+            System.out.print(" "+r.Data);
+            recursivePrint(r.right);
+        }
+        
+        public int recursiveCount(){
+        return recursiveCount(root);
+            
+        }
+        
+        private int recursiveCount(Node r){
+            if(r==null) return 0;
+            return recursiveCount(r.left)+recursiveCount(r.right)+1;
+        }
 
 }

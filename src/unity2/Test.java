@@ -18,16 +18,20 @@ public class Test {
     t.add(values[i]);
 }
     
-    int v=30; 
-    System.out.print("Path to" +v+ ":");
-    t.printPath(v);
-    
-    if(t.isLeaf(v)){
-        System.out.println(""+v+"is a leaf");
-    }
+   int v=30; 
+   System.out.print("Path to" +v+ ":");
+   t.printPath(v);
+   
+   if(t.isLeaf(v)){
+       System.out.println(""+v+"is a leaf");
+   }
     else{
-         System.out.println(""+v+"doesn`t a leaf");
-    }
+        System.out.println(""+v+"doesn`t a leaf");
+   }
+    t.recursivePrint();
+    
+    int r = t.recursiveCount();
+    System.out.println("total nodes: "+ r);
 }
 
 
