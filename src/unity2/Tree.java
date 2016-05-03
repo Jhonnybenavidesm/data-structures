@@ -5,8 +5,11 @@
  */
 package unity2;
 
+import java.awt.Graphics;
 import java.util.Stack;
 import java.util.Vector;
+import javax.swing.JFrame;
+import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 /**
  *
@@ -169,26 +172,58 @@ public void print(){
        return aux.Data;
    }
     
-        public void recursivePrint(){
+    public void recursivePrint(){
             recursivePrint(root);
             System.out.println();
         }
         
-        private void recursivePrint(Node r){
-            if(r==null)return;
-            recursivePrint(r.left);
-            System.out.print(" "+r.Data);
-            recursivePrint(r.right);
+    private void recursivePrint(Node r){
+        if(r==null)return;
+          recursivePrint(r.left);
+          System.out.print(" "+r.Data);
+          recursivePrint(r.right);
         }
         
-        public int recursiveCount(){
+    public int recursiveCount(){
         return recursiveCount(root);
             
         }
         
-        private int recursiveCount(Node r){
-            if(r==null) return 0;
-            return recursiveCount(r.left)+recursiveCount(r.right)+1;
+    private int recursiveCount(Node r){
+       if(r==null) return 0;
+          return recursiveCount(r.left)+recursiveCount(r.right)+1;
         }
-
+        
+    public int rHeight(){
+         return rHeight (root);
+         }
+        
+        
+    private int rHeight(Node r){
+        if (r==null)return 0;
+          int a = rHeight(r.left);
+          int b = rHeight(r.right);
+          return Math.max(a, b)+1;
+            }
+    
+    public void rDraw(){
+        JFrame f= new JFrame(){
+            public void paint(Graphics g){
+                
+                rDraw(root,20,40,g);
+            }  
+        };
+                f.setSize(600,400);
+                f.setVisible(true);
+                f.setDefaultCloseOperation(EXIT_ON_CLOSE);      
+    }
+    
+    private int rDraw (Node r,int x,int y,Graphics g){
+        if(r==null) return x;
+        x=rDraw(r.left,x,y+40,g);
+        g.drawString(""+r.Data,x+10,y+20);
+        g.drawOval(x, y, 30, 30);
+        x=rDraw(r.right,x+30,y+40,g);
+        return x;
+    }
 }

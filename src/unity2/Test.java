@@ -32,6 +32,8 @@ public class Test {
     
     int r = t.recursiveCount();
     System.out.println("total nodes: "+ r);
+    
+     t.rDraw();
 }
 
 
