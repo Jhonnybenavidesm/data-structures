@@ -1,4 +1,4 @@
-/*
+ /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -226,4 +226,34 @@ public void print(){
         x=rDraw(r.right,x+30,y+40,g);
         return x;
     }
+    
+    public boolean isComplete(){
+       return isComplete(root);
+    }
+    
+    private boolean isComplete(Node r){
+        if (r==null)return true;
+        if ((r.left==null && r.right!=null)||(r.left!=null && r.right==null)){
+            return false;
+        }
+        return isComplete(r.left) && isComplete(r.right);
+    }
+    
+  
+    private boolean exists(int d){
+       Node aux=root;
+       while(aux!=null){
+           if(d==aux.Data){
+               return true;
+           }
+           else if(d> aux.Data){
+               aux=aux.right;
+           }
+           else{
+               aux=aux.left;
+           }
+       }
+       return false;
+    }
+  
 }
