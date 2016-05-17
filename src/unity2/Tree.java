@@ -17,6 +17,7 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
  */
 public class Tree {
     private Node root;
+    int cont =0;
     
     public Tree (){
         root=null;
@@ -255,5 +256,64 @@ public void print(){
        }
        return false;
     }
+    public int CountOdds(){
+      return CountOdds(root);
+  }
+  
+  private int CountOdds(Node r){
+     
+      if(r==null) return 0;
+      if(r.Data%2==1){
+          cont++; 
+      }
+      
+      CountOdds(r.right);
+      CountOdds(r.left);
+      return cont+1;
+      
+  }
+  public void reversePrint(){
+      reversePrint(root);
+  }
+  
+  private void reversePrint(Node r){
+      
+      if(r==null) return;
+      
+      reversePrint(r.right);
+      System.out.print( " " +r.Data);
+      reversePrint(r.left);
+  }
+  public void PrintSonAlone(){
+      PrintSonAlone(root);
+  }
+  
+  private void PrintSonAlone(Node r){
+      
+      if(r==null) return;
+      
+      PrintSonAlone(r.left);
+      PrintSonAlone(r.right);
+      
+      if(r.left==null && r.right != null ){
+          System.out.println( " " +r.right.Data);
+      }else if (r.left!=null && r.right==null){
+          System.out.println( " " +r.left.Data);
+      }
+  }
+  public void printMissings() {
+      printMissings(root); 
+  }
+  private void printMissings(Node r) {
+       if(r==null) return;
+       for(int i=r.left.Data+1; i<r.Data; i++) {
+           System.out.println( " " + i);
+       }
+       if(r.right!=null){
+        for(int i=r.right.Data+1; i<r.Data; i++) {
+           System.out.println( " " + i);
+       }    
+       }
+  }
   
 }

@@ -14,6 +14,7 @@ public class Node {
     protected Node left;
     protected Node right;
     
+    
     public Node (int d){
         Data=d;
         left=null;

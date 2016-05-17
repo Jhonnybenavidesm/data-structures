@@ -32,8 +32,17 @@ public class Test {
     
     int r = t.recursiveCount();
     System.out.println("total nodes: "+ r);
-    
+   
      t.rDraw();
+        System.out.println(""+t.CountOdds());
+     
+      t.reversePrint();
+        System.out.println("");
+        
+       System.out.println("PrintSonAlone");
+      t.PrintSonAlone();
+      
+      t.printMissings();
 }
 
 
